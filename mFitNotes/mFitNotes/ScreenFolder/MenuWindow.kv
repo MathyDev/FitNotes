@@ -1,0 +1,20 @@
+<MenuWindow>:
+	FloatLayout:
+		Button:
+			text: "Pick up exercise"
+			pos_hint:{"x": 0.2,"y":0.7}
+			size_hint:(0.6,0.1)
+			on_release:
+				app.change_window("SelectionWindow")
+		Button:
+			text: "Check your progress"
+			pos_hint:{"x": 0.2,"y":0.5}
+			size_hint:(0.6,0.1)
+			on_release:
+				app.change_window("StatisticsWindow")
+		Button:
+			text: "Settings"
+			pos_hint:{"x": 0.2,"y":0.1}
+			size_hint:(0.6,0.1)
+			on_release:
+				

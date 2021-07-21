@@ -1,0 +1,27 @@
+#:include ScreenFolder/MenuWindow.kv
+#:include ScreenFolder/SelectionWindow.kv
+#:include ScreenFolder/StatisticsWindow.kv
+#:include ScreenFolder/ExerciseWindow.kv
+
+GridLayout:
+	cols:1
+	ScreenManager:
+		id: window_manager
+		MenuWindow:
+			name: "MenuWindow"
+			id:	menu_window
+		
+		SelectionWindow:
+			name: "SelectionWindow"
+			id: selection_window
+
+		StatisticsWindow:
+			name: "StatisticsWindow"
+			id: statistics_window
+
+		ExerciseWindow:
+			name: "ExerciseWindow"
+			id: exercise_window
+
+
+	

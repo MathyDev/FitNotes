@@ -1,0 +1,26 @@
+<SelectionWindow>:
+	FloatLayout:
+		id:selection_window_layout
+		Image:
+			source:"Pictures/whole_body.jpg"
+		Button:
+			text: "Back"
+			pos_hint:{"x": 0.9,"y":0.9}
+			size_hint:(0.1,0.1)
+			on_release:
+				app.change_window("MenuWindow")
+		ToggleButton:
+			id: biceps_button
+			text: "Biceps"
+			pos_hint:{"x": 0.05,"y":0.8}
+			size_hint:(0.1,0.1)
+			on_state:
+				if self.state == 'down': app.load_image("biceps_picture","biceps_picture.png")
+				else :	app.remove_image("biceps_picture.png")
+		Button:
+			text: "Confirm"
+			pos_hint:{"x": 0.9,"y":0.0}
+			size_hint:(0.1,0.1)
+			on_release:
+				app.collect_selected_parts()
+				app.change_window("ExerciseWindow")
